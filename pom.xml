@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.packer</groupId>
+  <artifactId>maven-plugin-js-css-version</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>maven-plugin</packaging>    <!-- 这里注意写为maven-plugin -->
+  <dependencies>
+  	<dependency>
+  		<groupId>org.apache.maven</groupId>
+  		<artifactId>maven-plugin-api</artifactId>
+  		<version>3.5.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.maven.plugin-tools</groupId>
+  		<artifactId>maven-plugin-annotations</artifactId>
+  		<version>3.5</version>
+  		<scope>provided</scope>
+  	</dependency>
+	<dependency> <!-- 采用jsoup包来处理html页面-->
+	    <groupId>org.jsoup</groupId>
+	    <artifactId>jsoup</artifactId>
+	    <version>1.11.3</version>
+	</dependency>
+  </dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<version>3.5</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>
